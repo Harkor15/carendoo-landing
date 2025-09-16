@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h1 {
+  @apply text-6xl font-semibold font-poppins text-primary;
+}
+
+h2 {
+  @apply text-5xl font-semibold font-poppins text-primary;
+}
+h3 {
+  @apply text-3xl font-semibold font-poppins text-primary;
+}
+
+h4 {
+  @apply text-3xl font-poppins text-secondary;
+}
+
+html, body {
+  @apply bg-background; /* albo bg-gray-900 czy co masz w theme */
+}
