@@ -4,20 +4,28 @@
 
 
 h1 {
-  @apply text-6xl font-semibold font-poppins text-primary;
+  @apply text-4xl font-semibold font-poppins text-primary text-center sm:text-6xl;
 }
 
 h2 {
-  @apply text-5xl font-semibold font-poppins text-primary;
+  @apply text-3xl font-semibold font-poppins text-primary text-center sm:text-5xl;
 }
 h3 {
-  @apply text-3xl font-semibold font-poppins text-primary;
+  @apply text-2xl font-semibold font-poppins text-primary text-center sm:text-4xl;
 }
 
 h4 {
-  @apply text-3xl font-poppins text-secondary;
+  @apply text-2xl font-poppins text-secondary text-center sm:text-4xl;
+}
+
+p {
+  @apply text-base font-bold font-poppins text-secondary;
 }
 
 html, body {
-  @apply bg-background; /* albo bg-gray-900 czy co masz w theme */
+  @apply bg-background text-base font-light font-poppins text-secondary; 
+}
+
+a {
+  @apply text-base font-bold font-poppins uppercase sm:text-xl;
 }
