@@ -16,7 +16,7 @@ function App() {
         {/* Top bar */}
         <div className="left-0 right-0 h-12 flex items-center justify-between z-50 sm:h-24">
           <img src={logo} alt="Logo" className="h-10 w-auto sm:h-24" />
-          <ButtonText text="LOG IN" />
+          {/* <ButtonText text="LOG IN" /> */}
         </div>
         {/* Hero content */}
         <div className="flex items-start justify-center mt-16">
@@ -26,7 +26,7 @@ function App() {
               <div className="mt-4 flex items-center flex-col">
                 <h1 className="text-center mx-4">Let's take care of your car</h1>
                 <h4 className="text-center mx-4 mt-2">Your support for maintenance, servicing, and car modifications.</h4>
-                <ButtonSmall text="JOIN NOW" onClick={() => {}} />
+                <ButtonSmall text="cooming soon" onClick={() => {}} />
               </div>
             </div>
           </div>
