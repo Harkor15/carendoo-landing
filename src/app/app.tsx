@@ -8,14 +8,25 @@ import ButtonSmall from "components/ButtonSmall"
 import ButtonLarge from "components/ButtonLarge"
 import ButtonText from "components/ButtonText"
 
+import { useTranslation } from 'react-i18next';
+import TranslationKeys from "./TranslationKeys"
+
 function App() {
+  const { t, i18n } = useTranslation();
+
+  const switchLang = (lng: string) => i18n.changeLanguage(lng);
+
   return (
     <div className="h-full w-full bg-background font-poppins pt-4 px-4 sm:pt-6 sm:px-8 lg:pt-8 lg:px-32">
       {/* Section hero */}
       <div>
         {/* Top bar */}
-        <div className="left-0 right-0 h-12 flex items-center justify-between z-50 sm:h-24">
+          <div className="left-0 right-0 h-12 flex items-center justify-between z-50 sm:h-24">
           <img src={logo} alt="Logo" className="h-10 w-auto sm:h-24" />
+          <div className="flex items-center gap-2">
+            <button className="text-sm" onClick={() => switchLang('en')}>EN</button>
+            <button className="text-sm" onClick={() => switchLang('pl')}>PL</button>
+          </div>
           {/* <ButtonText text="LOG IN" /> */}
         </div>
         {/* Hero content */}
@@ -24,9 +35,9 @@ function App() {
             <div className="flex flex-col items-center w-full sm:flex-row"  >
               <img src={img1} alt="img1" className="w-1/2 h-auto sm:h-96 sm:w-auto" />
               <div className="mt-4 flex items-center flex-col">
-                <h1 className="text-center mx-4">Let's take care of your car</h1>
-                <h4 className="text-center mx-4 mt-2">Your support for maintenance, servicing, and car modifications.</h4>
-                <ButtonSmall text="cooming soon" onClick={() => {}} />
+                <h1 className="text-center mx-4">{t(TranslationKeys.title)}</h1>
+                <h4 className="text-center mx-4 mt-2">{t(TranslationKeys.subtitle)}</h4>
+                <ButtonSmall text={t(TranslationKeys.comingSoon)} onClick={() => {}} />
               </div>
             </div>
           </div>
@@ -35,10 +46,10 @@ function App() {
       </div>
       {/* Middle section*/}
       <div className="flex justify-center pt-16 items-center flex-col">
-        <h2>Features and benefits</h2>
-        <Card title="NOTIFICATIONS" content="Lorem ipsum odor amet, consectetuer adipiscing elit. Malesuada potenti conubia aliquam in accumsan dolor tempus pharetra euismod. Posuere maecenas ex etiam nam sodales pellentesque?" image={img2}/>
-        <Card title="EXPENSE LOG" content="Class quisque bibendum class massa tempor neque sit habitant. Venenatis montes ligula dictum inceptos eros conubia natoque. Tempor ultrices lobortis quis tristique" image={img3}  reverseOrder={true}/>
-        <Card title="AI SUPPORT" content="CEx dolor proin vitae donec at sed augue. Torquent aptent semper consectetur eu vitae. Elit primis non torquent a; nullam at finibus." image={img4} />
+        <h2>{t(TranslationKeys.features)}</h2>
+        <Card title={t(TranslationKeys.expense)} content={t(TranslationKeys.expenseDesc)} image={img3} />
+        <Card title={t(TranslationKeys.notifications)} content={t(TranslationKeys.notificationsDesc)} image={img2} reverseOrder={true}/>
+        <Card title={t(TranslationKeys.aiSupport)} content={t(TranslationKeys.aiSupportDesc)} image={img4} />
       </div>
 
       {/* <ButtonLarge upperText="GET STARTED" bottomText="IT'S FREE" icon="" onClick={() => {}} /> */}

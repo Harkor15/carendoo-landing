@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "app/app";
 import ico from "./images/ico.png";
+import "./i18n";
 
 const setFavicon = (href: string) => {
   const existing = document.querySelector("link[rel~='icon']") as HTMLLinkElement | null;
