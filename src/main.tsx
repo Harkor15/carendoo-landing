@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "app/app";
+import Confirm from "app/Confirm";
 import ico from "./images/ico.png";
 import "./i18n";
 
@@ -21,6 +23,11 @@ setFavicon(ico);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/confirm" element={<Confirm />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
 );

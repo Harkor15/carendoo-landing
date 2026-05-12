@@ -6,16 +6,20 @@ const resources = {
     en: {
         translation: {
             [TranslationKeys.login]: "LOG IN",
-            [TranslationKeys.title]: "Let’s take care of your car",
+            [TranslationKeys.title]: "Let's take care of your car",
             [TranslationKeys.subtitle]: "Your control over service, expenses and modifications",
             [TranslationKeys.comingSoon]: "coming soon",
             [TranslationKeys.features]: "Features and benefits",
             [TranslationKeys.notifications]: "NOTIFICATIONS",
-            [TranslationKeys.notificationsDesc]: "Don’t let anything slip by – Carendoo will remind you about inspections, oil changes, services, and all important car-related deadlines. Stay on top of everything and avoid unexpected problems.",
+            [TranslationKeys.notificationsDesc]: "Don't let anything slip by – Carendoo will remind you about inspections, oil changes, services, and all important car-related deadlines. Stay on top of everything and avoid unexpected problems.",
             [TranslationKeys.expense]: "EXPENSE LOG",
             [TranslationKeys.expenseDesc]: "Track all your car expenses – from fuel, through service and repairs, to upgrades. Carendoo gives you full control over your budget and helps you plan costs in advance.",
             [TranslationKeys.aiSupport]: "AI SUPPORT",
-            [TranslationKeys.aiSupportDesc]: "Not sure what’s wrong with your car? Carendoo helps you diagnose issues – just describe the symptoms, and our artificial intelligence will suggest possible faults and guide you on the next steps. This way, you can quickly understand what’s happening with your vehicle and take action before minor problems turn into costly repairs."
+            [TranslationKeys.aiSupportDesc]: "Not sure what's wrong with your car? Carendoo helps you diagnose issues – just describe the symptoms, and our artificial intelligence will suggest possible faults and guide you on the next steps. This way, you can quickly understand what's happening with your vehicle and take action before minor problems turn into costly repairs.",
+            [TranslationKeys.confirmTitle]: "Email Confirmed!",
+            [TranslationKeys.confirmSubtitle]: "Welcome to Carendoo",
+            [TranslationKeys.confirmMessage]: "Thank you for confirming your email address. Your account is now fully activated and ready to use. Start taking care of your vehicle with Carendoo today!",
+            [TranslationKeys.backHome]: "BACK TO HOME"
         }
     },
     pl: {
@@ -30,7 +34,11 @@ const resources = {
             [TranslationKeys.expense]: "DZIENNIK WYDATKÓW",
             [TranslationKeys.expenseDesc]: "Śledź wszystkie wydatki swojego samochodu – od spalania, przez serwis i naprawy, po modyfikacje. Carendoo daje Ci pełną kontrolę nad budżetem i pozwala planować koszty z wyprzedzeniem.",
             [TranslationKeys.aiSupport]: "WSPARCIE AI",
-            [TranslationKeys.aiSupportDesc]: "Nie wiesz, co dolega Twojemu samochodowi? Carendoo pomoże Ci zdiagnozować problemy – wystarczy opisać objawy, a nasza sztuczna inteligencja zasugeruje możliwe usterki i podpowie kolejne kroki. Dzięki temu szybciej zrozumiesz, co dzieje się z Twoim autem i jak temu zaradzić."
+            [TranslationKeys.aiSupportDesc]: "Nie wiesz, co dolega Twojemu samochodowi? Carendoo pomoże Ci zdiagnozować problemy – wystarczy opisać objawy, a nasza sztuczna inteligencja zasugeruje możliwe usterki i podpowie kolejne kroki. Dzięki temu szybciej zrozumiesz, co dzieje się z Twoim autem i jak temu zaradzić.",
+            [TranslationKeys.confirmTitle]: "Email potwierdzony!",
+            [TranslationKeys.confirmSubtitle]: "Witaj w Carendoo",
+            [TranslationKeys.confirmMessage]: "Dziękujemy za potwierdzenie adresu e-mail. Twoje konto jest teraz w pełni aktywne i gotowe do użytku. Zacznij dbać o swój pojazd z Carendoo już dzisiaj!",
+            [TranslationKeys.backHome]: "POWRÓT DO STRONY GŁÓWNEJ"
         }
     }
 };

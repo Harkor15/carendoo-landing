@@ -8,12 +8,15 @@ export default defineConfig(() => {
     base: '/',
     server: {
       port: 3000,
+      middlewareMode: false,
+      historyApiFallback: true,
     },
     resolve: {
       alias: {
         app: resolve(__dirname, "src", "app"),
         components: resolve(__dirname, "src", "components"),
         hooks: resolve(__dirname, "src", "hooks"),
+        images: resolve(__dirname, "src", "images"),
       },
     },
   };

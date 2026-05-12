@@ -9,7 +9,11 @@ const  TranslationKeys = {
   expense: "expense",
   expenseDesc: "expenseDesc",
   aiSupport: "aiSupport",
-  aiSupportDesc: "aiSupportDesc"
+  aiSupportDesc: "aiSupportDesc",
+  confirmTitle: "confirmTitle",
+  confirmSubtitle: "confirmSubtitle",
+  confirmMessage: "confirmMessage",
+  backHome: "backHome"
 };
 
 export default TranslationKeys;
