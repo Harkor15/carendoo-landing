@@ -2,16 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/carendoo-landingpage/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carendoo</title>
     <script>
       // Redirect all SPA routes to index.html
       const path = window.location.pathname.replace(/\/$/, '');
       if (path && !path.includes('.')) {
-        const segments = path.split('/');
-        sessionStorage.redirect = segments[segments.length - 1];
-        window.location.href = '/carendoo-landingpage/';
+        const segments = path.split('/').filter(Boolean);
+        sessionStorage.redirect = '/' + segments.join('/');
+        window.location.href = '/';
       }
     </script>
   </head>
