@@ -33,7 +33,7 @@
     "yarn": ">=1.22.5"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp public/CNAME dist/CNAME",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
