@@ -7,10 +7,29 @@ import Card from "components/Card"
 import ButtonSmall from "components/ButtonSmall"
 
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import TranslationKeys from "./TranslationKeys"
 
 function App() {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  // Check for error parameters on mount
+  useEffect(() => {
+    const errorCode = searchParams.get("error_code");
+    const error = searchParams.get("error");
+    
+    if (errorCode || error) {
+      // Redirect to error page with all parameters
+      const errorParams = new URLSearchParams();
+      searchParams.forEach((value, key) => {
+        errorParams.append(key, value);
+      });
+      navigate(`/error?${errorParams.toString()}`);
+    }
+  }, [searchParams, navigate]);
 
   const switchLang = (lng: string) => i18n.changeLanguage(lng);
 

@@ -19,7 +19,18 @@ const resources = {
             [TranslationKeys.confirmTitle]: "Email Confirmed!",
             [TranslationKeys.confirmSubtitle]: "Welcome to Carendoo",
             [TranslationKeys.confirmMessage]: "Thank you for confirming your email address. Your account is now fully activated and ready to use. Start taking care of your vehicle with Carendoo today!",
-            [TranslationKeys.privacyPolicyTitle]: "Privacy Policy"
+            [TranslationKeys.privacyPolicyTitle]: "Privacy Policy",
+            [TranslationKeys.errorTitleOtpExpired]: "Link Expired",
+            [TranslationKeys.errorTitleAccessDenied]: "Access Denied",
+            [TranslationKeys.errorTitleGeneric]: "Something went wrong",
+            [TranslationKeys.errorMessageOtpExpired]: "The confirmation link has expired or is invalid. Please try registering or resetting your password again.",
+            [TranslationKeys.errorMessageAccessDenied]: "You don't have access to this operation. If you believe this is an error, please contact us.",
+            [TranslationKeys.errorMessageGeneric]: "Something went wrong. Please try again.",
+            [TranslationKeys.errorButtonHome]: "Back to home page",
+            [TranslationKeys.errorContact]: "If the problem persists, please contact our support team.",
+            [TranslationKeys.notFoundTitle]: "Page Not Found",
+            [TranslationKeys.notFoundMessage]: "The page you're looking for doesn't exist. It may have been moved or deleted.",
+            [TranslationKeys.notFoundHelp]: "If you believe this is a mistake, please contact our support team.",
         }
     },
     pl: {
@@ -38,7 +49,18 @@ const resources = {
             [TranslationKeys.confirmTitle]: "Email potwierdzony!",
             [TranslationKeys.confirmSubtitle]: "Witaj w Carendoo",
             [TranslationKeys.confirmMessage]: "Dziękujemy za potwierdzenie adresu e-mail. Twoje konto jest teraz w pełni aktywne i gotowe do użytku. Zacznij dbać o swój pojazd z Carendoo już dzisiaj!",
-            [TranslationKeys.privacyPolicyTitle]: "Polityka Prywatności"
+            [TranslationKeys.privacyPolicyTitle]: "Polityka Prywatności",
+            [TranslationKeys.errorTitleOtpExpired]: "Link wygasł",
+            [TranslationKeys.errorTitleAccessDenied]: "Dostęp odmówiony",
+            [TranslationKeys.errorTitleGeneric]: "Coś poszło nie tak",
+            [TranslationKeys.errorMessageOtpExpired]: "Link potwierdzający wygasł lub jest nieprawidłowy. Spróbuj ponownie zarejestrować się lub zresetować hasło.",
+            [TranslationKeys.errorMessageAccessDenied]: "Nie masz dostępu do tej operacji. Jeśli uważasz, że to błąd, skontaktuj się z nami.",
+            [TranslationKeys.errorMessageGeneric]: "Coś poszło nie tak. Spróbuj ponownie.",
+            [TranslationKeys.errorButtonHome]: "Wróć na stronę główną",
+            [TranslationKeys.errorContact]: "Jeśli problem się powtarza, skontaktuj się z naszym wsparciem.",
+            [TranslationKeys.notFoundTitle]: "Strona nie znaleziona",
+            [TranslationKeys.notFoundMessage]: "Strona, której szukasz, nie istnieje. Może została przeniesiona lub usunięta.",
+            [TranslationKeys.notFoundHelp]: "Jeśli uważasz, że to błąd, skontaktuj się z naszym wsparciem.",
         }
     }
 };

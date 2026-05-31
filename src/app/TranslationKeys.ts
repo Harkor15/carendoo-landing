@@ -14,6 +14,17 @@ const  TranslationKeys = {
   confirmSubtitle: "confirmSubtitle",
   confirmMessage: "confirmMessage",
   privacyPolicyTitle: "privacyPolicyTitle",
+  errorTitleOtpExpired: "errorTitleOtpExpired",
+  errorTitleAccessDenied: "errorTitleAccessDenied",
+  errorTitleGeneric: "errorTitleGeneric",
+  errorMessageOtpExpired: "errorMessageOtpExpired",
+  errorMessageAccessDenied: "errorMessageAccessDenied",
+  errorMessageGeneric: "errorMessageGeneric",
+  errorButtonHome: "errorButtonHome",
+  errorContact: "errorContact",
+  notFoundTitle: "notFoundTitle",
+  notFoundMessage: "notFoundMessage",
+  notFoundHelp: "notFoundHelp",
 };
 
 export default TranslationKeys;

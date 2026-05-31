@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "app/app";
 import Confirm from "app/Confirm";
 import PrivacyPolicy from "app/PrivacyPolicy/PrivacyPolicy";
+import ErrorPage from "app/ErrorPage/ErrorPage";
+import NotFound from "app/NotFound/NotFound";
 import ico from "./images/ico.png";
 import "./i18n";
 
@@ -29,6 +31,8 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<App />} />
         <Route path="/confirm" element={<Confirm />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/error" element={<ErrorPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
