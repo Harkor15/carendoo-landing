@@ -13,6 +13,7 @@ const  TranslationKeys = {
   confirmTitle: "confirmTitle",
   confirmSubtitle: "confirmSubtitle",
   confirmMessage: "confirmMessage",
+  privacyPolicyTitle: "privacyPolicyTitle",
 };
 
 export default TranslationKeys;

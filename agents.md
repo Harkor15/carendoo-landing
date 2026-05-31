@@ -60,9 +60,33 @@ Wszystkie komponenty:
 ### 3. **Wielojęzyczność (i18next)**
 - Obsługiwane języki: **PL**, **EN**
 - Przechowywanie:
-  - Konfiguracja: `src/i18n.ts`
-  - Klucze: `src/app/TranslationKeys.ts` (Enums dla type-safety)
-  - Zasoby: wewnętrzne (w `i18n.ts`) - nie ma osobnych plików JSON
+  - Klucze: `src/app/TranslationKeys.ts` (ZAWSZE tutaj definiuj nowe klucze!)
+  - Tłumaczenia: `src/i18n.ts` (używaj `TranslationKeys.nowyKlucz` zamiast stringów)
+  - Format: `[TranslationKeys.klucz]: "wartość"`
+
+**Konwencja dla nowych tłumaczeń:**
+```tsx
+// 1. Dodaj klucz w TranslationKeys.ts
+const TranslationKeys = {
+  myNewKey: "myNewKey",
+};
+
+// 2. Użyj w i18n.ts (obie wersje - PL i EN!)
+en: {
+  translation: {
+    [TranslationKeys.myNewKey]: "English text",
+  }
+},
+pl: {
+  translation: {
+    [TranslationKeys.myNewKey]: "Polski tekst",
+  }
+}
+
+// 3. Używaj w komponencie
+const { t } = useTranslation();
+<h1>{t(TranslationKeys.myNewKey)}</h1>
+```
 
 **Użycie w komponencie**:
 ```tsx

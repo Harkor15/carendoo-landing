@@ -19,8 +19,7 @@ const resources = {
             [TranslationKeys.confirmTitle]: "Email Confirmed!",
             [TranslationKeys.confirmSubtitle]: "Welcome to Carendoo",
             [TranslationKeys.confirmMessage]: "Thank you for confirming your email address. Your account is now fully activated and ready to use. Start taking care of your vehicle with Carendoo today!",
-            [TranslationKeys.backHome]: "BACK TO HOME",
-            privacyPolicyTitle: "Privacy Policy"
+            [TranslationKeys.privacyPolicyTitle]: "Privacy Policy"
         }
     },
     pl: {
@@ -39,7 +38,7 @@ const resources = {
             [TranslationKeys.confirmTitle]: "Email potwierdzony!",
             [TranslationKeys.confirmSubtitle]: "Witaj w Carendoo",
             [TranslationKeys.confirmMessage]: "Dziękujemy za potwierdzenie adresu e-mail. Twoje konto jest teraz w pełni aktywne i gotowe do użytku. Zacznij dbać o swój pojazd z Carendoo już dzisiaj!",
-            privacyPolicyTitle: "Polityka Prywatności"
+            [TranslationKeys.privacyPolicyTitle]: "Polityka Prywatności"
         }
     }
 };
