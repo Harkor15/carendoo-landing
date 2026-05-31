@@ -13,7 +13,6 @@ const  TranslationKeys = {
   confirmTitle: "confirmTitle",
   confirmSubtitle: "confirmSubtitle",
   confirmMessage: "confirmMessage",
-  backHome: "backHome"
 };
 
 export default TranslationKeys;
