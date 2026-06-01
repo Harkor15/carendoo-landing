@@ -3,7 +3,7 @@ name: Lint and Build Check
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   lint-and-build:
