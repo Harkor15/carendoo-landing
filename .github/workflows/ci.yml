@@ -3,7 +3,7 @@ name: Lint and Build Check
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   lint-and-build:
@@ -17,10 +17,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
+
+      - name: Remove package-lock.json and node_modules
+        run: rm -rf package-lock.json node_modules
+
+      - name: Clean npm cache
+        run: npm cache clean --force
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --verbose
 
       - name: Run linter
         run: npm run lint
