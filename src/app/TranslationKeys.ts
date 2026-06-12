@@ -25,6 +25,20 @@ const  TranslationKeys = {
   notFoundTitle: "notFoundTitle",
   notFoundMessage: "notFoundMessage",
   notFoundHelp: "notFoundHelp",
+  deleteTitle: "deleteTitle",
+  deleteInAppHeading: "deleteInAppHeading",
+  deleteInAppBody: "deleteInAppBody",
+  deleteEmailHeading: "deleteEmailHeading",
+  deleteEmailDescription: "deleteEmailDescription",
+  deleteEmailAddress: "deleteEmailAddress",
+  deleteEmailNote: "deleteEmailNote",
+  deleteMailSubject: "deleteMailSubject",
+  deleteWhatWeDeleteHeading: "deleteWhatWeDeleteHeading",
+  deleteWhatWeDeleteBody: "deleteWhatWeDeleteBody",
+  deleteTimeframeHeading: "deleteTimeframeHeading",
+  deleteTimeframeBody: "deleteTimeframeBody",
+  deleteExtra: "deleteExtra",
+  deleteEmailButton: "deleteEmailButton",
 };
 
 export default TranslationKeys;
