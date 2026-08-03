@@ -41,11 +41,11 @@ export default function DeleteAccount() {
             <p className="text-lg mb-2">
               {t(TranslationKeys.deleteEmailDescription)}{" "}
 
-                <a href={`mailto:${t(TranslationKeys.deleteEmailAddress)}`}>
-                  {t(TranslationKeys.deleteEmailAddress)}
-                </a>
-             
-            
+              <a href={mailto}>
+                {t(TranslationKeys.deleteEmailAddress)}
+              </a>
+
+
             </p>
             <p className="text-sm text-secondary whitespace-pre-line">{t(TranslationKeys.deleteEmailNote)}</p>
 
@@ -58,13 +58,13 @@ export default function DeleteAccount() {
               </a>
             </div> */}
 
-      <h3 className="text-base font-semibold mt-10">{t(TranslationKeys.deleteWhatWeDeleteHeading)}</h3>
-      <p className="text-sm text-secondary">{t(TranslationKeys.deleteWhatWeDeleteBody)}</p>
+            <h3 className="text-base font-semibold mt-10">{t(TranslationKeys.deleteWhatWeDeleteHeading)}</h3>
+            <p className="text-sm text-secondary">{t(TranslationKeys.deleteWhatWeDeleteBody)}</p>
 
-      <h3 className="text-lg font-semibold mt-10">{t(TranslationKeys.deleteTimeframeHeading)}</h3>
-      <p className="text-sm text-secondary">{t(TranslationKeys.deleteTimeframeBody)}</p>
+            <h3 className="text-lg font-semibold mt-10">{t(TranslationKeys.deleteTimeframeHeading)}</h3>
+            <p className="text-sm text-secondary">{t(TranslationKeys.deleteTimeframeBody)}</p>
 
-      <p className="text-lg text-muted mt-4">{t(TranslationKeys.deleteExtra)}</p>
+            <p className="text-lg text-muted mt-4">{t(TranslationKeys.deleteExtra)}</p>
           </section>
         </div>
       </main>
