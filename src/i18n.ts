@@ -45,6 +45,13 @@ const resources = {
             [TranslationKeys.deleteTimeframeBody]: "The deletion process will be completed within 14 days of receiving the request.",
             [TranslationKeys.deleteExtra]: "We may request additional identity verification if necessary before completing deletion.",
             [TranslationKeys.deleteEmailButton]: "Send deletion request by email",
+            [TranslationKeys.expiredLinkTitle]: "Confirmation Link Expired",
+            [TranslationKeys.expiredLinkSubtitle]: "This link is no longer active",
+            [TranslationKeys.expiredLinkMessage]: "Your confirmation link has expired. To receive a new confirmation email with an active code, try logging into the Carendoo app – the app will allow you to send a new activation link.",
+            [TranslationKeys.expiredLinkStep1]: "Open the Carendoo app on your device",
+            [TranslationKeys.expiredLinkStep2]: "Attempt to log in with your email and password",
+            [TranslationKeys.expiredLinkStep3]: "Send yourself a new confirmation email from the app",
+            [TranslationKeys.expiredLinkBackHome]: "Back to home page",
         }
     },
     pl: {
@@ -67,7 +74,7 @@ const resources = {
             [TranslationKeys.errorTitleOtpExpired]: "Link wygasł",
             [TranslationKeys.errorTitleAccessDenied]: "Dostęp odmówiony",
             [TranslationKeys.errorTitleGeneric]: "Coś poszło nie tak",
-            [TranslationKeys.errorMessageOtpExpired]: "Link potwierdzający wygasł lub jest nieprawidłowy. Spróbuj ponownie zarejestrować się lub zresetować hasło.",
+            [TranslationKeys.errorMessageOtpExpired]: "Link potwierdzający wygasł lub jest nieprawidłowy. Podjąć próbę logowania w aplikacji, aby otrzymać nowego maila z kodem.",
             [TranslationKeys.errorMessageAccessDenied]: "Nie masz dostępu do tej operacji. Jeśli uważasz, że to błąd, skontaktuj się z nami.",
             [TranslationKeys.errorMessageGeneric]: "Spróbuj ponownie lub skontaktuj się z naszym wsparciem.",
             [TranslationKeys.errorButtonHome]: "Wróć na stronę główną",
@@ -89,6 +96,13 @@ const resources = {
             [TranslationKeys.deleteTimeframeBody]: "Proces usuwania danych zostanie zakończony w ciągu 14 dni od otrzymania wiadomości.",
             [TranslationKeys.deleteExtra]: "W razie potrzeby możemy poprosić o dodatkową weryfikację tożsamości przed usunięciem danych.",
             [TranslationKeys.deleteEmailButton]: "Wyślij żądanie e‑mailem",
+            [TranslationKeys.expiredLinkTitle]: "Link potwierdzający wygasł",
+            [TranslationKeys.expiredLinkSubtitle]: "Ten link jest już nieaktualny",
+            [TranslationKeys.expiredLinkMessage]: "Twój link potwierdzający wygasł. Aby otrzymać nowego maila z aktywnym kodem, podjmij próbę logowania w aplikacji Carendoo – aplikacja umożliwi Ci wysłanie nowego maila aktywacyjnego.",
+            [TranslationKeys.expiredLinkStep1]: "Otwórz aplikację Carendoo na swoim telefonie",
+            [TranslationKeys.expiredLinkStep2]: "Podjmij próbę logowania podając swój e-mail i hasło",
+            [TranslationKeys.expiredLinkStep3]: "Wyślij sobie nowego maila aktywacyjnego z poziomu aplikacji",
+            [TranslationKeys.expiredLinkBackHome]: "Wróć na stronę główną",
         }
     }
 };

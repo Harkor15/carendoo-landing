@@ -11,6 +11,10 @@ function ErrorPage() {
   const errorCode = searchParams.get("error_code");
   const errorDescription = searchParams.get("error_description");
 
+  if (errorCode === "otp_expired") {
+    navigate("/expired-link", { replace: true });
+  }
+
   const switchLang = (lng: string) => i18n.changeLanguage(lng);
 
   // Map error codes to user-friendly messages
