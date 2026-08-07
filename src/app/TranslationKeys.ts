@@ -39,6 +39,13 @@ const  TranslationKeys = {
   deleteTimeframeBody: "deleteTimeframeBody",
   deleteExtra: "deleteExtra",
   deleteEmailButton: "deleteEmailButton",
+  expiredLinkTitle: "expiredLinkTitle",
+  expiredLinkSubtitle: "expiredLinkSubtitle",
+  expiredLinkMessage: "expiredLinkMessage",
+  expiredLinkStep1: "expiredLinkStep1",
+  expiredLinkStep2: "expiredLinkStep2",
+  expiredLinkStep3: "expiredLinkStep3",
+  expiredLinkBackHome: "expiredLinkBackHome",
 };
 
 export default TranslationKeys;

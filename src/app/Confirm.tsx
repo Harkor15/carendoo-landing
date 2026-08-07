@@ -1,9 +1,23 @@
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import TranslationKeys from './TranslationKeys';
 import logo from '../images/logo.png';
+import { parseAuthErrorParams } from './utils/authError';
 
 function Confirm() {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const { errorCode, error, rawParams } = parseAuthErrorParams();
+
+    if (errorCode === 'otp_expired') {
+      navigate('/expired-link', { replace: true });
+    } else if (errorCode || error) {
+      navigate(`/error?${rawParams.toString()}`, { replace: true });
+    }
+  }, [navigate]);
 
   const switchLang = (lng: string) => i18n.changeLanguage(lng);
 

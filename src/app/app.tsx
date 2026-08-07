@@ -8,28 +8,24 @@ import StoreButtons from "components/StoreButtons";
 
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import TranslationKeys from "./TranslationKeys";
+import { parseAuthErrorParams } from "./utils/authError";
 
 function App() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
 
   // Check for error parameters on mount
   useEffect(() => {
-    const errorCode = searchParams.get("error_code");
-    const error = searchParams.get("error");
+    const { errorCode, error, rawParams } = parseAuthErrorParams();
 
-    if (errorCode || error) {
-      // Redirect to error page with all parameters
-      const errorParams = new URLSearchParams();
-      searchParams.forEach((value, key) => {
-        errorParams.append(key, value);
-      });
-      navigate(`/error?${errorParams.toString()}`);
+    if (errorCode === "otp_expired") {
+      navigate("/expired-link", { replace: true });
+    } else if (errorCode || error) {
+      navigate(`/error?${rawParams.toString()}`, { replace: true });
     }
-  }, [searchParams, navigate]);
+  }, [navigate]);
 
   const switchLang = (lng: string) => i18n.changeLanguage(lng);
 

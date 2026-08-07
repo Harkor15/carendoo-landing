@@ -8,6 +8,7 @@ import PrivacyPolicy from "app/PrivacyPolicy/PrivacyPolicy";
 import ErrorPage from "app/ErrorPage/ErrorPage";
 import NotFound from "app/NotFound/NotFound";
 import DeleteAccount from "app/DeleteAccount/DeleteAccount";
+import ExpiredLink from "app/ExpiredLink/ExpiredLink";
 import ico from "./images/ico.png";
 import "./i18n";
 
@@ -33,6 +34,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/confirm" element={<Confirm />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/delete-account" element={<DeleteAccount />} />
+        <Route path="/expired-link" element={<ExpiredLink />} />
         <Route path="/error" element={<ErrorPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
