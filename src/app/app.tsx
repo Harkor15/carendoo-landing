@@ -15,19 +15,22 @@ import { parseAuthErrorParams } from "./utils/authError";
 function App() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const authError = parseAuthErrorParams();
 
   // Check for error parameters on mount
   useEffect(() => {
-    const { errorCode, error, rawParams } = parseAuthErrorParams();
-
-    if (errorCode === "otp_expired") {
+    if (authError.errorCode === "otp_expired") {
       navigate("/expired-link", { replace: true });
-    } else if (errorCode || error) {
-      navigate(`/error?${rawParams.toString()}`, { replace: true });
+    } else if (authError.errorCode || authError.error) {
+      navigate(`/error?${authError.rawParams.toString()}`, { replace: true });
     }
-  }, [navigate]);
+  }, [authError.errorCode, authError.error, authError.rawParams, navigate]);
 
   const switchLang = (lng: string) => i18n.changeLanguage(lng);
+
+  if (authError.errorCode || authError.error) {
+    return null;
+  }
 
   return (
     <div className="h-full w-full bg-background font-poppins pt-4 px-4 sm:pt-6 sm:px-8 lg:pt-8 lg:px-16 xl:px-24">
