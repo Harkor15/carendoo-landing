@@ -8,18 +8,21 @@ import { parseAuthErrorParams } from './utils/authError';
 function Confirm() {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const authError = parseAuthErrorParams();
 
   useEffect(() => {
-    const { errorCode, error, rawParams } = parseAuthErrorParams();
-
-    if (errorCode === 'otp_expired') {
+    if (authError.errorCode === 'otp_expired') {
       navigate('/expired-link', { replace: true });
-    } else if (errorCode || error) {
-      navigate(`/error?${rawParams.toString()}`, { replace: true });
+    } else if (authError.errorCode || authError.error) {
+      navigate(`/error?${authError.rawParams.toString()}`, { replace: true });
     }
-  }, [navigate]);
+  }, [authError.errorCode, authError.error, authError.rawParams, navigate]);
 
   const switchLang = (lng: string) => i18n.changeLanguage(lng);
+
+  if (authError.errorCode || authError.error) {
+    return null;
+  }
 
   return (
     <div className="h-screen w-full bg-gradient-to-br from-background via-background to-primary/10 font-poppins flex flex-col">
