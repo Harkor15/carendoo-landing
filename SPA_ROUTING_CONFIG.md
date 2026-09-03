@@ -6,16 +6,20 @@ W Single Page Application (SPA) routing nie działa, gdy użytkownik odświeży 
 ## Rozwiązanie
 
 ### 1. **GitHub Pages** (jeśli będziesz deployować na GH Pages)
-Już skonfigurowane w:
-- `public/404.html` - Catches all 404s i redirectuje do `index.html` z informacją o oryginalnej ścieżce
-- `index.html` - Zawiera skrypt obsługujący redirect z `sessionStorage`
 
-**Jak działa:**
-1. Użytkownik wejdzie na `/confirm`
-2. GitHub Pages zwróci 404.html
-3. 404.html przetrzymuje ścieżkę w `sessionStorage` i redirectuje do `/`
-4. index.html odczyta `sessionStorage.redirect` i przywróci oryginalną ścieżkę
-5. React Router obsługuje routing
+Dla GitHub Pages stosujemy dwa uzupełniające się mechanizmy:
+
+#### A. **Generowanie folderów dla znanych tras (Fake SSG - 200 OK dla botów i crawlerów)**
+Skrypt `scripts/postbuild.js` uruchamiany automatycznie w `npm run build` tworzy katalogi w `dist/` odpowiadające zdefiniowanym trasom (np. `/delete-account`, `/confirm`, `/privacy-policy`) i kopiuje do nich `index.html`.
+Dzięki temu:
+- GitHub Pages bezpośrednio serwuje `dist/delete-account/index.html` z kodem **HTTP 200 OK**
+- Boty (np. weryfikator linków Google Play, roboty SEO) natychmiast widzą działającą stronę bez błędu 404
+
+#### B. **Fallback 404 (`public/404.html`)**
+Dla pozostałych, niezdefiniowanych z góry ścieżek nadal działa fallback:
+- `public/404.html` - przechwytuje 404 i przekierowuje do `index.html` z informacją o ścieżce w `sessionStorage`
+- `index.html` - odczytuje informację i przywraca ścieżkę dla React Routera
+
 
 ### 2. **Serwer Apache** (.htaccess)
 Plik `public/.htaccess` zawiera regułę mod_rewrite, która:
