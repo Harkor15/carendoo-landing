@@ -36,7 +36,7 @@
     "predeploy": "npm run build && cp public/CNAME dist/CNAME",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node scripts/postbuild.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
