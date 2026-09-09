@@ -3,6 +3,7 @@ const  TranslationKeys = {
   title: "title",
   subtitle: "subtitle",
   comingSoon: "comingSoon",
+  appStoreComingSoon: "appStoreComingSoon",
   features: "features",
   notifications: "notifications",
   notificationsDesc: "notificationsDesc",

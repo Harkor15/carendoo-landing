@@ -11,8 +11,8 @@ const StoreButtons: React.FC = () => {
       <div className="flex flex-row flex-wrap justify-center items-center gap-3 sm:gap-4">
         {/* App Store Badge */}
         <div
-          className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-[#091126] border border-slate-600/80 shadow-lg opacity-70 cursor-not-allowed select-none transition-all hover:opacity-80"
-          title={t(TranslationKeys.comingSoon)}
+          className="relative flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-[#091126]/60 border border-slate-700/60 shadow-md opacity-40 grayscale cursor-not-allowed select-none"
+          title={t(TranslationKeys.appStoreComingSoon)}
         >
           <svg
             className="w-7 h-7 fill-white flex-shrink-0"
@@ -22,19 +22,25 @@ const StoreButtons: React.FC = () => {
             <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-14.1 69.5-34.3z" />
           </svg>
           <div className="flex flex-col text-left">
-            <span className="text-[10px] uppercase tracking-wider text-slate-300 font-medium leading-none">
+            <span className="text-[10px] uppercase tracking-wider text-slate-400 font-medium leading-none">
               Download on the
             </span>
             <span className="text-sm sm:text-base font-semibold tracking-tight text-white leading-tight mt-0.5">
               App Store
             </span>
           </div>
+          <span className="absolute -top-2 -right-2 text-[10px] font-medium px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 shadow-sm whitespace-nowrap">
+            {t(TranslationKeys.comingSoon)}
+          </span>
         </div>
 
         {/* Google Play Badge */}
-        <div
-          className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-[#091126] border border-slate-600/80 shadow-lg opacity-70 cursor-not-allowed select-none transition-all hover:opacity-80"
-          title={t(TranslationKeys.comingSoon)}
+        <a
+          href="https://play.google.com/store/apps/details?id=com.harkor.carendoo&referrer=utm_source%3Dlanding_page%26utm_medium%3Dbadge%26utm_campaign%3Dwebsite"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-[#091126] border border-slate-600/80 shadow-lg hover:border-slate-400 hover:bg-[#0c1633] hover:scale-105 active:scale-95 transition-all cursor-pointer select-none"
+          aria-label="Google Play"
         >
           <svg
             className="w-6 h-6 flex-shrink-0"
@@ -134,13 +140,13 @@ const StoreButtons: React.FC = () => {
               Google Play
             </span>
           </div>
-        </div>
+        </a>
       </div>
 
-      {/* Subtle Coming Soon Badge */}
+      {/* iOS Coming Soon Notice */}
       <div className="mt-3.5 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs text-secondary/90 font-medium tracking-wide">
         <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-        <span className="capitalize">{t(TranslationKeys.comingSoon)}</span>
+        <span>{t(TranslationKeys.appStoreComingSoon)}</span>
       </div>
     </div>
   );
