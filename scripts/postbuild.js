@@ -8,6 +8,7 @@ const routes = [
   "delete-account",
   "expired-link",
   "error",
+  "qr",
 ];
 
 const distDir = path.resolve("dist");
