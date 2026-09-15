@@ -9,6 +9,7 @@ import ErrorPage from "app/ErrorPage/ErrorPage";
 import NotFound from "app/NotFound/NotFound";
 import DeleteAccount from "app/DeleteAccount/DeleteAccount";
 import ExpiredLink from "app/ExpiredLink/ExpiredLink";
+import QrRedirect from "app/QrRedirect";
 import ico from "./images/ico.png";
 import "./i18n";
 
@@ -31,6 +32,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/qr" element={<QrRedirect />} />
         <Route path="/confirm" element={<Confirm />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/delete-account" element={<DeleteAccount />} />
