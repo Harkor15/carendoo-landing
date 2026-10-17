@@ -49,12 +49,16 @@ export default function PrivacyPolicyEN() {
           <h3 className="text-lg font-semibold text-primary mb-4">Types of Data Collected</h3>
           
           <div className="mb-6">
-            <h4 className="font-semibold text-primary mb-3">Personal Data</h4>
+            <h4 className="font-semibold text-primary mb-3">User-Provided Data</h4>
             <p className="leading-relaxed mb-3">
-              While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
+              While using Our Service, You may enter information required to maintain vehicle usage and expense records:
             </p>
             <ul className="list-disc ml-6 space-y-2">
-              <li className="leading-relaxed">Email address</li>
+              <li className="leading-relaxed"><strong>Account Information:</strong> Your email address (necessary for registration, authentication, and cloud synchronization).</li>
+              <li className="leading-relaxed"><strong>Vehicle Details:</strong> A custom vehicle nickname chosen freely by You (e.g. your car's nickname). The Application does not require or collect vehicle identification numbers (VIN) or license plate numbers.</li>
+              <li className="leading-relaxed"><strong>Refueling and Odometer Logs:</strong> Odometer reading (vehicle mileage), date and time of refueling, fuel type, volume in liters, fuel price per unit, total refueling cost, fuel station name or brand, and optional personal notes.</li>
+              <li className="leading-relaxed"><strong>Expense Notes:</strong> General notes and entries entered by You regarding ongoing vehicle upkeep (e.g. car wash, fluid changes, maintenance, road tolls).</li>
+              <li className="leading-relaxed"><strong>Receipt Photos:</strong> Photos of fuel receipts or maintenance invoices captured via your Device camera or selected from your photo library, used for automated AI extraction or attached to your entry history.</li>
             </ul>
           </div>
 
@@ -97,9 +101,28 @@ export default function PrivacyPolicyEN() {
           <li className="leading-relaxed"><strong>For the performance of a contract</strong>: The development, compliance and undertaking of the purchase contract for the products, items or services You have purchased (such as premium subscriptions or additional features) or of any other contract with Us through the Service.</li>
           <li className="leading-relaxed"><strong>To contact You</strong>: To contact You by email regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.</li>
           <li className="leading-relaxed"><strong>To manage Your requests</strong>: To attend and manage Your requests to Us.</li>
-          <li className="leading-relaxed"><strong>For crash reporting and performance monitoring</strong>: To automatically collect diagnostic data, crash logs, and performance metrics to help us fix bugs and improve application stability.</li>
+          <li className="leading-relaxed"><strong>For automated AI receipt scanning</strong>: To securely process receipt images using external artificial intelligence models (such as Google or Groq) solely to extract transaction data and facilitate refueling entry creation.</li>
+          <li className="leading-relaxed"><strong>To display advertisements and measure performance</strong>: To deliver personalized or contextual advertisements via third-party ad networks (Unity Ads), analyze ad campaign effectiveness, and prevent ad fraud.</li>
           <li className="leading-relaxed"><strong>For other purposes</strong>: We may use Your information for data analysis, identifying usage trends, and to evaluate and improve our Service, products, marketing and your experience.</li>
         </ul>
+
+        <div className="mt-6">
+          <h3 className="text-lg font-semibold text-primary mb-3">Legal Basis for Processing (GDPR)</h3>
+          <p className="leading-relaxed mb-3">
+            We process Your data in accordance with the General Data Protection Regulation (GDPR) under the following legal bases:
+          </p>
+          <ul className="list-disc ml-6 space-y-2">
+            <li className="leading-relaxed">
+              <strong>Performance of a Contract (Art. 6(1)(b) GDPR):</strong> Operating your user account, saving refueling and odometer entries, and computing fuel economy statistics.
+            </li>
+            <li className="leading-relaxed">
+              <strong>Your Consent (Art. 6(1)(a) GDPR):</strong> Voluntary permission to access your Device's camera or photo library and submit receipt images to AI models for scanning. You can withdraw your consent at any time in your Device settings.
+            </li>
+            <li className="leading-relaxed">
+              <strong>Legitimate Interests (Art. 6(1)(f) GDPR):</strong> Monitoring application stability and error diagnostics (Sentry), ad security and fraud prevention (Unity Ads), and protecting against legal claims.
+            </li>
+          </ul>
+        </div>
       </section>
 
       {/* Sharing and Storage */}
@@ -113,7 +136,13 @@ export default function PrivacyPolicyEN() {
             <strong>With Cloud Infrastructure and Database Providers (Supabase)</strong>: We use Supabase (Supabase Inc.) as our main backend and database provider. Your Account Information and Application data are securely stored on their servers.
           </li>
           <li className="leading-relaxed">
+            <strong>With Third-Party Artificial Intelligence (AI) Model Providers (Google, Groq)</strong>: When using automated receipt scanning, photos are securely transmitted via encrypted API connections to AI providers solely to extract transaction details. This data is not used to train public models.
+          </li>
+          <li className="leading-relaxed">
             <strong>With Diagnostics and Crash Analytics Providers (Sentry)</strong>: We use Sentry (Functional Software, Inc.) to monitor application errors. Sentry may collect limited device diagnostics and crash logs when an error occurs to help us maintain software stability.
+          </li>
+          <li className="leading-relaxed">
+            <strong>With Third-Party Advertising Networks (Unity Ads)</strong>: We use the external advertising network Unity Ads to display ads in the Application. Detailed information regarding advertising data processing and opt-out options is provided in the dedicated advertising section below.
           </li>
           <li className="leading-relaxed">
             <strong>For Payment Processing (In-App Purchases)</strong>: All financial transactions, premium subscriptions, or digital purchases are handled directly and securely by the Apple App Store or Google Play Store. We do not collect, store, or have access to your payment card details, bank account info, or billing data.
@@ -125,6 +154,122 @@ export default function PrivacyPolicyEN() {
             <strong>Under Law enforcement</strong>: Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
           </li>
         </ul>
+      </section>
+
+      {/* Advertising and Third-Party Services */}
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold text-primary">Advertising and Third-Party Services (Unity Ads)</h2>
+        <p className="leading-relaxed">
+          To provide free access to selected features of the Application and to support ongoing development, our Application uses a third-party advertising network to display advertisements.
+        </p>
+
+        <div>
+          <h3 className="text-lg font-semibold text-primary mb-2">Ad Network Provider &amp; Privacy Policy</h3>
+          <p className="leading-relaxed">
+            Advertising services within the Application are provided by a third party – <strong>Unity Ads</strong> (operated by <strong>Unity Technologies</strong>). All data processing operations conducted by this provider are governed by its own privacy policy, which you can review directly at:{' '}
+            <a
+              href="https://unity.com/legal/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline hover:opacity-80 transition"
+            >
+              https://unity.com/legal/privacy-policy
+            </a>.
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold text-primary mb-2">Scope of Collected Data</h3>
+          <p className="leading-relaxed mb-3">
+            In connection with serving advertisements, Unity Ads may automatically collect and process certain categories of data from your Device, including:
+          </p>
+          <ul className="list-disc ml-6 space-y-2">
+            <li className="leading-relaxed">
+              <strong>Device Identifiers:</strong> unique advertising identifiers assigned by your operating system, specifically Google Advertising ID (AAID) on Android devices or Identifier for Advertisers (IDFA) on iOS devices.
+            </li>
+            <li className="leading-relaxed">
+              <strong>Device Information:</strong> device model and manufacturer, operating system and version, language settings, time zone, network connection type, and mobile carrier.
+            </li>
+            <li className="leading-relaxed">
+              <strong>Coarse Location:</strong> general geographic location (such as country or city) estimated from your IP address.
+            </li>
+            <li className="leading-relaxed">
+              <strong>Ad Interaction and Impression Data:</strong> details on which ads are displayed, viewing duration (including completed video views), ad clicks, and whether an ad led to an app installation.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold text-primary mb-2">Purposes of Data Processing</h3>
+          <p className="leading-relaxed mb-3">
+            Data collected by the advertising provider is used for the following purposes:
+          </p>
+          <ul className="list-disc ml-6 space-y-2">
+            <li className="leading-relaxed">
+              <strong>Ad Delivery:</strong> serving personalized advertisements tailored to your interests or contextual (general) ads.
+            </li>
+            <li className="leading-relaxed">
+              <strong>Analytics &amp; Performance Measurement:</strong> evaluating ad campaign effectiveness, tracking impressions, and reporting performance metrics.
+            </li>
+            <li className="leading-relaxed">
+              <strong>Fraud Prevention:</strong> detecting fraudulent behavior, preventing invalid clicks (click fraud), mitigating bots, and preserving the integrity and security of the advertising ecosystem.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold text-primary mb-2">User Opt-Out and Controls</h3>
+          <p className="leading-relaxed mb-3">
+            You have full control over personalized advertising and can reset or restrict advertising identifiers at any time in your Device settings:
+          </p>
+          <ul className="list-disc ml-6 space-y-2">
+            <li className="leading-relaxed">
+              <strong>On Android:</strong> go to <em>Settings</em> → <em>Privacy</em> (or <em>Google</em>) → <em>Ads</em> → you can reset your advertising ID or select <em>Delete advertising ID</em> / opt out of personalized ads.
+            </li>
+            <li className="leading-relaxed">
+              <strong>On iOS (Apple):</strong> go to <em>Settings</em> → <em>Privacy &amp; Security</em> → <em>Tracking</em> (where you can turn off <em>Allow Apps to Request to Track</em>) and go to <em>Apple Advertising</em> to turn off <em>Personalized Ads</em>.
+            </li>
+          </ul>
+          <p className="leading-relaxed mt-3">
+            Please note that opting out of personalized advertising does not eliminate ads altogether; you will instead receive contextual (non-targeted) ads rather than ads based on your inferred interests.
+          </p>
+        </div>
+      </section>
+
+      {/* AI Receipt Scanning */}
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold text-primary">Receipt Scanning and Artificial Intelligence (AI) Processing</h2>
+        <p className="leading-relaxed">
+          The Application offers an optional intelligent fuel receipt scanning feature that automatically extracts transaction details (such as total cost, fuel volume in liters, fuel type, date, or station name) directly from a photo taken with your Device camera or chosen from your photo library.
+        </p>
+
+        <div>
+          <h3 className="text-lg font-semibold text-primary mb-2">Third-Party AI Model Providers</h3>
+          <p className="leading-relaxed">
+            For image analysis and text recognition (OCR), the Application connects via secure programming interfaces (APIs) to external providers of advanced artificial intelligence models (such as Google or Groq).
+          </p>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold text-primary mb-2">Privacy Standards and No Model Training</h3>
+          <p className="leading-relaxed mb-3">
+            Your document privacy is fundamental to us, and we adhere to strict standards:
+          </p>
+          <ul className="list-disc ml-6 space-y-2">
+            <li className="leading-relaxed">
+              <strong>No Public Model Training:</strong> Data and images submitted through commercial enterprise APIs <strong>are not used</strong> by AI providers to train, fine-tune, or develop public artificial intelligence models.
+            </li>
+            <li className="leading-relaxed">
+              <strong>Real-Time Processing (In-Transit):</strong> Images are sent over encrypted HTTPS connections to AI provider servers solely to process and extract text in real time, after which the processing session concludes.
+            </li>
+            <li className="leading-relaxed">
+              <strong>Data Storage:</strong> Third-party AI API providers do not persistently store your images after fulfilling the request. The extracted entry parameters (and optionally the receipt image, should you choose to attach it to your history) are stored in the Application's secure cloud database (Supabase).
+            </li>
+            <li className="leading-relaxed">
+              <strong>User Recommendation:</strong> The scanning feature is strictly intended for fuel receipts and vehicle upkeep invoices. Please refrain from submitting images containing government IDs, payment cards with full numbers and CVV codes, or other sensitive personal information.
+            </li>
+          </ul>
+        </div>
       </section>
 
       {/* Retention */}
@@ -148,24 +293,47 @@ export default function PrivacyPolicyEN() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-primary">Transfer of Your Personal Data</h2>
         <p className="leading-relaxed mb-4">
-          Your information, including Personal Data, is processed at the Company's operating locations and in any other places where the parties involved in the processing (such as Supabase or Sentry) are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ from those from Your jurisdiction.
+          Your information, including Personal Data, is processed at the Company's operating locations and in any other places where the parties involved in the processing (such as Supabase, Sentry, or AI API providers) are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ from those from Your jurisdiction.
         </p>
         <p className="leading-relaxed">
           The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy.
         </p>
       </section>
 
-      {/* Delete Your Data */}
+      {/* GDPR Rights & Delete Your Data */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-primary">Delete Your Personal Data</h2>
+        <h2 className="text-2xl font-semibold text-primary">Your Data Protection Rights (GDPR) and Data Deletion</h2>
         <p className="leading-relaxed mb-4">
-          You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
+          Under the General Data Protection Regulation (GDPR), You have the following rights regarding Your Personal Data:
         </p>
-        <p className="leading-relaxed mb-4">
-          Our Service gives You the ability to delete certain information about You, as well as your entire account, directly from within the Application's account settings section. You may also contact Us via email to request access to, correct, or delete any Personal Data that You have provided to Us.
-        </p>
+        <ul className="list-disc ml-6 space-y-3 mb-4">
+          <li className="leading-relaxed">
+            <strong>Right of Access (Art. 15 GDPR):</strong> You have the right to request confirmation as to whether We process Your data and obtain a copy of that data.
+          </li>
+          <li className="leading-relaxed">
+            <strong>Right to Rectification (Art. 16 GDPR):</strong> You have the right to correct inaccurate data or complete incomplete entries directly in the Application.
+          </li>
+          <li className="leading-relaxed">
+            <strong>Right to Erasure ("Right to be Forgotten", Art. 17 GDPR):</strong> You have the right to delete your account and all associated vehicle logs, refueling entries, and notes at any time directly through the Application settings, or by contacting Us via email.
+          </li>
+          <li className="leading-relaxed">
+            <strong>Right to Restriction of Processing (Art. 18 GDPR):</strong> You have the right to request restriction of the processing of Your personal data under statutory conditions.
+          </li>
+          <li className="leading-relaxed">
+            <strong>Right to Data Portability (Art. 20 GDPR):</strong> You have the right to receive Your data in a structured, commonly used, and machine-readable electronic format.
+          </li>
+          <li className="leading-relaxed">
+            <strong>Right to Object (Art. 21 GDPR):</strong> You have the right to object to processing based on Our legitimate interests.
+          </li>
+          <li className="leading-relaxed">
+            <strong>Right to Withdraw Consent:</strong> Where processing relies on Your consent (such as camera/photo library access or AI scanning), You may withdraw Your consent at any time via your Device settings.
+          </li>
+          <li className="leading-relaxed">
+            <strong>Right to Lodge a Complaint:</strong> You have the right to lodge a complaint with a competent data protection supervisory authority (in Poland: the President of the Personal Data Protection Office – PUODO, ul. Stawki 2, 00-193 Warsaw, www.uodo.gov.pl, or your local EU authority).
+          </li>
+        </ul>
         <p className="leading-relaxed">
-          Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.
+          To exercise any of these rights, or if You have any questions, You can contact Us at: <strong>contact@carendoo.com</strong>.
         </p>
       </section>
 

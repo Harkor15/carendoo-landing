@@ -28,8 +28,8 @@ export default function PrivacyPolicy() {
         </h1>
         <p className="text-secondary text-sm text-center mt-2">
           {i18n.language === 'pl' 
-            ? 'Ostatnia aktualizacja: 1 czerwca 2026' 
-            : 'Last updated: June 1, 2026'}
+            ? 'Ostatnia aktualizacja: 17 października 2026' 
+            : 'Last updated: October 17, 2026'}
         </p>
       </div>
 
